@@ -1,22 +1,19 @@
-import React from 'react'
-import useGameLogic from '../Hooks/gameLogic'
+import GamePlay from "./gamePlay"
+import useGameLogic from "../Hooks/gameLogic"
+import HandleGuess from "./handleGuess";
 
 
 function Game() {
+  useGameLogic();
 
-  const {correctPokemon, pokemonImg} = useGameLogic();
-
-  console.log(correctPokemon, pokemonImg);
   return (
-      <>
-        <div>
-          <img 
-          src={String(pokemonImg)} 
-          alt="Who's That Pokémon?" 
-          className="filter brightness-0"
-        />
-        </div>
-      </>
+    <>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4" style={{ backgroundImage: "url('/pokemonbg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <GamePlay />
+      <HandleGuess />
+    </div>
+    </>
+
   )
 }
 
