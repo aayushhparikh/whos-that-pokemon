@@ -15,7 +15,7 @@ public class RedisConfig {
     public LettuceConnectionFactory redisConnectionFactory() {
         RedisStandaloneConfiguration config = new RedisStandaloneConfiguration(
                 "redis-15050.c91.us-east-1-3.ec2.redns.redis-cloud.com", 15050);
-        config.setPassword(""); // Secure this in production
+        config.setPassword("ymcwqduZ3uBQUMU7S0G3rsjWuDr7GW9X"); // Secure this in production
         return new LettuceConnectionFactory(config);
     }
 
